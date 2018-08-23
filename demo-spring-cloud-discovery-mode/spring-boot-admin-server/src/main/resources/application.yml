@@ -1,0 +1,15 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: spring-boot-admin-server
+
+#配置Eureka客户端
+eureka:
+  instance:
+    leaseRenewalIntervalInSeconds: 10
+    health-check-url-path: /actuator/health
+  client:
+    registryFetchIntervalSeconds: 5
+    serviceUrl:
+      defaultZone: ${EUREKA_SERVICE_URL:http://localhost:8761}/eureka/
