@@ -1,6 +1,16 @@
 
 server.port: 9090
-spring.application.name: spring-boot-admin-client
+spring:
+  application:
+    name: spring-boot-admin-client
+
+
+
+
+info:
+  tags:
+    environment: test
+
 #配置Eureka客户端
 eureka:
   instance:
@@ -10,6 +20,7 @@ eureka:
     registryFetchIntervalSeconds: 5
     serviceUrl:
       defaultZone: ${EUREKA_SERVICE_URL:http://localhost:8761}/eureka/
+
 
 #通过http暴露所有的endpoints(spring boot 2 大部门都没有暴露)
 management:
